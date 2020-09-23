@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/hello")
 public class HelloHandler {
-    @Value("${server.port}")
-    private String port ;
+    @Value("${env}")
+    private String env;
 
     @GetMapping("/index")
-    public String index(){
-        return this.port;
+    public String print() {
+        return env;
     }
+
 }
