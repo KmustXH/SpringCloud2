@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/KmustXH/SpringCloud2.git
+          searchPaths: config
+          username: KmustXH
+          password: xh@6561572
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
